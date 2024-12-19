@@ -6,10 +6,10 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Jacob",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Mukobi",
+  message: " Driven to explore the universe. ",
   icons: [
     {
       image: "fa-github",
@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Jacob Mukobi.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: "https://drive.google.com/file/d/1xCJQA7p58RRzcSwViXmt909M5TxtCtjq/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -126,8 +126,8 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for opportunities in space! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "jmukobi@stanford.edu",
 };
 
 const experiences = {
