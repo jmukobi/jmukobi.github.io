@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to the branch you use for development (e.g., 'master' or 'main').
+      - master  # Change to the branch you use for development (e.g., 'master' or 'main').
 
 jobs:
   deploy:
