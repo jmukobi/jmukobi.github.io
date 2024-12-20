@@ -44,7 +44,7 @@ const about = {
   imageSize: 375,
   message:
     "I'm a master's student in Stanford's Aero/Astro program and a systems engineer at Zipline. I led Stanford's first two fully student-driven space missions and have worked at several space companies. Space exploration gets me out of bed in the morning, I'm great at building things, and I love solving hard problems.",
-  resume: "https://drive.google.com/file/d/1xCJQA7p58RRzcSwViXmt909M5TxtCtjq/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1a4nBLQcO07mAvJtvcPkTmQ1C62LXWkEX/view?usp=sharing",
 };
 
 // PROJECTS SECTION
