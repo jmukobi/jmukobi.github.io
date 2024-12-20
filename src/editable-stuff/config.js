@@ -125,6 +125,11 @@ const getInTouch = {
   email: "jmukobi@stanford.edu",
 };
 
+const photography = {
+  show: false,
+  heading: "Photography",
+};
+
 const experiences = {
   show: false,
   heading: "Experiences",
@@ -147,4 +152,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, photography, experiences };

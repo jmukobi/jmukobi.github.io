@@ -8,7 +8,8 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  photography
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -65,6 +66,11 @@ const Home = React.forwardRef((props, ref) => {
           softwareSkills={skills.softwareSkills}
           programmingSkills={skills.programmingSkills}
           fabricationSkills={skills.fabricationSkills}
+        />
+      )}
+      {photography.show && (
+        <Photography
+          heading={photography.heading}
         />
       )}
     </>
