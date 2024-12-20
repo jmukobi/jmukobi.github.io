@@ -13,24 +13,13 @@ const mainBody = {
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/jmukobi",
     },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
+
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
-    },
+      url: "https://www.linkedin.com/in/jacob-mukobi-6722ab168/",
+    }
   ],
 };
 
@@ -54,7 +43,7 @@ const about = {
   imageLink: require("../editable-stuff/Wide_Headshot.jpg"),
   imageSize: 375,
   message:
-    "My name is Jacob Mukobi.",
+    "I'm a master's student in Stanford's Aero/Astro program and a systems engineer at Zipline. I led Stanford's first two fully student-driven space missions and have worked at several space companies. Space exploration gets me out of bed in the morning, I'm great at building things, and I love solving hard problems.",
   resume: "https://drive.google.com/file/d/1xCJQA7p58RRzcSwViXmt909M5TxtCtjq/view?usp=sharing",
 };
 
@@ -99,25 +88,31 @@ const leadership = {
 const skills = {
   show: true,
   heading: "Skills",
-  hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+  softwareSkills: [
+    { name: "Solidworks", value: 95 },
+    { name: "NX", value: 85 },
+    { name: "Ansys", value: 80 },
+    { name: "Fusion 360", value: 95 },
+    { name: "Inventor Pro", value: 85 },
+    { name: "Onshape", value: 80 },
+    { name: "STK", value: 70 },
+    { name: "FreeFlyer", value: 60 },
   ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+  programmingSkills: [
+    { name: "Python", value: 95 },
+    { name: "MATLAB", value: 95 },
+    { name: "JavaScript", value: 70 },
+    { name: "C/C++", value: 80 },
+    { name: "HTML", value: 75 },
+    { name: "CSS", value: 70 },
+  ],
+  fabricationSkills: [
+    { name: "CNC Mill", value: 90 },
+    { name: "3D Printer", value: 95 },
+    { name: "Composite Layup", value: 75 },
+    { name: "Lathe", value: 80 },
+    { name: "Milling Machine", value: 90 },
+    { name: "Waterjet", value: 75 },
   ],
 };
 

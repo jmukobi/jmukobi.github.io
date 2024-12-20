@@ -1,0 +1,64 @@
+/* Photography.css */
+body {
+    background-color: #f0f0f0; /* Change this to your desired background color */
+  }
+  
+  .masonry-grid {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .masonry-sizer,
+  .masonry-item {
+    width: 32%; /* This sets the base column width to 33.333% for 3 columns */
+    margin-bottom: 32px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .masonry-image {
+    width: 95%;
+    height: auto;
+    display: block;
+    cursor: pointer; /* Add cursor pointer to indicate the image is clickable */
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  }
+
+  .masonry-image:hover {
+    transform: scale(1.05); /* Scale the image up on hover */
+  }
+  
+  .rounded-square {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Adjust the max-width as needed */
+    aspect-ratio: 1 / 1; /* Ensure the image is square */
+    border-radius: 15px; /* Adjust the border-radius as needed */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  }
+
+.blurb-text {
+    /*font-family: 'Arial', sans-serif; */
+    font-size: 2em; 
+    /*color: #333; */
+    padding: 60% 0;
+    padding-left: 10%;
+
+  }
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .masonry-sizer,
+    .masonry-item {
+      width: 48%; /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .masonry-sizer,
+    .masonry-item {
+      width: 100%; /* 1 column on small screens */
+    }
+  }

@@ -20,8 +20,8 @@ import Skills from "./components/home/Skills";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
-
 import Experience from "./components/home/Experience";
+import Photography from "./components/Photography";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -66,8 +66,9 @@ const Home = React.forwardRef((props, ref) => {
       {skills.show && (
         <Skills
           heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
+          softwareSkills={skills.softwareSkills}
+          programmingSkills={skills.programmingSkills}
+          fabricationSkills={skills.fabricationSkills}
         />
       )}
       
@@ -83,6 +84,7 @@ const App = () => {
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path="/photography" element={<Photography />} /> {/* Add the Photography route */}
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}

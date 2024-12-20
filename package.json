@@ -9,17 +9,20 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
-    "sass": "^1.54.3",
-    "react-typist-component": "^1.0.3",
+    "gh-pages": "^4.0.0",
+    "masonry-layout": "^4.2.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.6.3",
     "react-loading-skeleton": "^3.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-typist-component": "^1.0.3",
+    "sass": "^1.54.3",
     "web-vitals": "^2.1.4",
-    "gh-pages": "^4.0.0"
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -31,8 +34,8 @@
     "custom-deploy": "node pages.js"
   },
   "engines": {
-    "npm": "^10.2.3",
-    "node": "^20.10.0"
+    "npm": "^10.9.0",
+    "node": "^22.12.0"
   },
   "eslintConfig": {
     "extends": [
