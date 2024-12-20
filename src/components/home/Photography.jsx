@@ -57,7 +57,7 @@ const Photography = ({ heading }) => {
   }, [showImages]);
 
   return (
-    <Container className="pt-5">
+    <Container id="photography" className="pt-5 pb-5">
       <Row className="mb-4 align-items-center justify-content-center">
         <Col md={4} className="text-center">
           <LazyLoadImage
@@ -76,8 +76,16 @@ const Photography = ({ heading }) => {
       </Row>
 
       {!showImages && (
-        <div className="text-center">
-          <Button onClick={() => setShowImages(true)}>Show Images</Button>
+        <div className="text-center mb-5">
+          <Button
+            className="btn btn-outline-dark btn-lg"
+            onClick={() => setShowImages(true)}
+            role="button"
+            aria-label="Show Images"
+            style={{ backgroundColor: 'transparent' }}
+          >
+            Show Images
+          </Button>
         </div>
       )}
 
