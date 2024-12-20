@@ -9,7 +9,7 @@ import './Photography.css'; // Import the CSS file for styling
 
 // Dynamically import all images from the photography folder
 const importAll = (r) => r.keys().map(r);
-const photos = importAll(require.context('../assets/photography', false, /\.(png|jpe?g|svg)$/));
+const photos = importAll(require.context('../../assets/photography', false, /\.(png|jpe?g|svg)$/));
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = (array) => {
@@ -58,7 +58,7 @@ const Photography = () => {
       <Row className="mb-4 align-items-center justify-content-center">
         <Col md={4} className="text-center">
           <LazyLoadImage
-            src={require('../assets/img/photographer_portrait.jpg')}
+            src={require('../../assets/img/photographer_portrait.jpg')}
             className="rounded-square"
             effect="blur"
             alt="Photographer Portrait"
