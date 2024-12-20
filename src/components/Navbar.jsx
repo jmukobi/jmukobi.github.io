@@ -74,7 +74,7 @@ const Navigation = React.forwardRef((props, ref) => {
           )}
           <NavLink
             className="nav-item lead"
-            href="/photography"
+            href="/photography.html"
           >
             Photography
           </NavLink>

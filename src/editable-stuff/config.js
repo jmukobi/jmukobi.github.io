@@ -126,7 +126,7 @@ const getInTouch = {
 };
 
 const photography = {
-  show: false,
+  show: true,
   heading: "Photography",
 };
 

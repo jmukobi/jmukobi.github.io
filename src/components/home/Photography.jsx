@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import Masonry from 'masonry-layout';
 import Lightbox from 'yet-another-react-lightbox';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -20,38 +20,41 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const Photography = () => {
+const Photography = ({ heading }) => {
   const masonryRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [shuffledPhotos] = useState(() => shuffleArray([...photos])); // Shuffle photos only once
+  const [showImages, setShowImages] = useState(false);
 
   useEffect(() => {
-    const masonryInstance = new Masonry(masonryRef.current, {
-      itemSelector: '.masonry-item',
-      columnWidth: '.masonry-sizer',
-      percentPosition: true,
-      gutter: 16,
-    });
-
-    // Re-layout Masonry after each image loads
-    const handleImageLoad = () => {
-      masonryInstance.layout();
-    };
-
-    // Attach the load event listener to each image
-    const images = masonryRef.current.querySelectorAll('.masonry-image');
-    images.forEach((img) => {
-      img.addEventListener('load', handleImageLoad);
-    });
-
-    // Cleanup event listeners on unmount
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener('load', handleImageLoad);
+    if (showImages) {
+      const masonryInstance = new Masonry(masonryRef.current, {
+        itemSelector: '.masonry-item',
+        columnWidth: '.masonry-sizer',
+        percentPosition: true,
+        gutter: 16,
       });
-    };
-  }, []);
+
+      // Re-layout Masonry after each image loads
+      const handleImageLoad = () => {
+        masonryInstance.layout();
+      };
+
+      // Attach the load event listener to each image
+      const images = masonryRef.current.querySelectorAll('.masonry-image');
+      images.forEach((img) => {
+        img.addEventListener('load', handleImageLoad);
+      });
+
+      // Cleanup event listeners on unmount
+      return () => {
+        images.forEach((img) => {
+          img.removeEventListener('load', handleImageLoad);
+        });
+      };
+    }
+  }, [showImages]);
 
   return (
     <Container className="pt-5">
@@ -72,34 +75,42 @@ const Photography = () => {
         </Col>
       </Row>
 
-      <div ref={masonryRef} className="masonry-grid">
-        <div className="masonry-sizer"></div>
-        {shuffledPhotos.map((photo, index) => (
-          <div key={index} className="masonry-item">
-            <LazyLoadImage
-              src={photo}
-              alt={`Photography ${index}`}
-              className="masonry-image"
-              effect="blur"
-              onClick={() => {
-                setPhotoIndex(index);
-                setIsOpen(true);
-              }}
-              afterLoad={() => {
-                // Trigger Masonry layout after each image loads
-                if (masonryRef.current) {
-                  new Masonry(masonryRef.current, {
-                    itemSelector: '.masonry-item',
-                    columnWidth: '.masonry-sizer',
-                    percentPosition: true,
-                    gutter: 16,
-                  }).layout();
-                }
-              }}
-            />
-          </div>
-        ))}
-      </div>
+      {!showImages && (
+        <div className="text-center">
+          <Button onClick={() => setShowImages(true)}>Show Images</Button>
+        </div>
+      )}
+
+      {showImages && (
+        <div ref={masonryRef} className="masonry-grid">
+          <div className="masonry-sizer"></div>
+          {shuffledPhotos.map((photo, index) => (
+            <div key={index} className="masonry-item">
+              <LazyLoadImage
+                src={photo}
+                alt={`Photography ${index}`}
+                className="masonry-image"
+                effect="blur"
+                onClick={() => {
+                  setPhotoIndex(index);
+                  setIsOpen(true);
+                }}
+                afterLoad={() => {
+                  // Trigger Masonry layout after each image loads
+                  if (masonryRef.current) {
+                    new Masonry(masonryRef.current, {
+                      itemSelector: '.masonry-item',
+                      columnWidth: '.masonry-sizer',
+                      percentPosition: true,
+                      gutter: 16,
+                    }).layout();
+                  }
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {isOpen && (
         <Lightbox
