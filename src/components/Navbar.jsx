@@ -37,7 +37,7 @@ const Navigation = React.forwardRef((props, ref) => {
       className={`px-3 fixed-top ${!isTop ? "navbar-white" : "navbar-transparent"}`}
       expand="lg"
     >
-      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="navbar-brand" href="#/">
         {`${mainBody.firstName}`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
@@ -74,7 +74,7 @@ const Navigation = React.forwardRef((props, ref) => {
           )}
           <NavLink
             className="nav-item lead"
-            href={process.env.PUBLIC_URL + "/photography"}
+            href="/photography"
           >
             Photography
           </NavLink>
