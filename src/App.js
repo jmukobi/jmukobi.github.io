@@ -73,6 +73,7 @@ const Home = React.forwardRef((props, ref) => {
           heading={photography.heading}
         />
       )}
+      
     </>
   );
 });

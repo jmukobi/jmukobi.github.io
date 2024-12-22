@@ -43,7 +43,7 @@ const about = {
   imageLink: require("../editable-stuff/Wide_Headshot.jpg"),
   imageSize: 375,
   message:
-    "I'm a master's student in Stanford's Aero/Astro program and a systems engineer at Zipline. I led Stanford's first two fully student-driven space missions and have worked at several space companies. Space exploration gets me out of bed in the morning, I'm great at building things, and I love solving hard problems.",
+    "I'm a master's student in Stanford's Aero/Astro program, I do research in the Stanford Reconfigurable and Active Structures Lab, and I'm a systems engineer at Zipline. I led Stanford's first two fully student-driven space missions and have worked at several space companies. Space exploration gets me out of bed in the morning, I'm great at building things, and I love solving hard problems.",
   resume: "https://drive.google.com/file/d/154AWhDrqMw7td-ZZMQYGkLnYmlCnYslQ/view?usp=sharing",
 };
 
@@ -147,9 +147,16 @@ const experiences = {
   ]
 }
 
+const projects = {
+  show: true,
+  heading: "Recent GitHub Projects",
+  username: "jmukobi", // Replace with your GitHub username
+  length: 0, // Number of recent projects to display
+  specfic: ["jmukobi.github.io", "Tropospheric-Delay-Modeling", "fantasy_football", "CS229-Project"], // Replace with specific repository names if needed
+};
 // Blog SECTION
 // const blog = {
-//   show: false,
+//   show: true,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, photography, experiences };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, photography, experiences, projects };

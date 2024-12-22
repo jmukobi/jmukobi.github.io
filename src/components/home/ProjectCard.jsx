@@ -12,7 +12,7 @@ const ProjectCard = ({ value }) => {
     stargazers_count,
     languages_url,
     pushed_at,
-  } = value;
+  } = value || {};
   return (
     <Col md={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -104,7 +104,17 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
+    if (!pushed_at) {
+      setUpdated_at("unknown");
+      return;
+    }
+
     const date = new Date(pushed_at);
+    if (isNaN(date.getTime())) {
+      setUpdated_at("unknown");
+      return;
+    }
+
     const nowdate = new Date();
     const diff = nowdate.getTime() - date.getTime();
     const hours = Math.trunc(diff / 1000 / 60 / 60);
