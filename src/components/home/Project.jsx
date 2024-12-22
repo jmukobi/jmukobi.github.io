@@ -6,7 +6,7 @@ import './Project.css'; // Import the CSS file for styling
 import { projects } from '../../editable-stuff/config'; // Import the projects config
 
 const Project = () => {
-  const { heading, username, length, specfic } = projects;
+  const { username, length, specfic } = projects;
   const allReposAPI = `https://api.github.com/users/${username}/repos?sort=updated&direction=desc`;
   const specficReposAPI = `https://api.github.com/repos/${username}`;
   const dummyProjectsArr = new Array(length + specfic.length).fill({
@@ -38,7 +38,7 @@ const Project = () => {
       }
       // setting projectArray
       // TODO: remove the duplication.
-      setProjectsArray(repoList);
+      setProjectsArray(repoList.slice(0, 4)); // Ensure the array is limited to 4 items
     } catch (error) {
       console.error(error.message);
     }
@@ -51,7 +51,7 @@ const Project = () => {
   return (
     <Container fluid id="projects" className="bg-light m-0 p-5">
       <Container>
-        <h2 className="display-4 pb-5 text-center">{"Recent Projects"}</h2>
+        <h2 className="display-4 pb-5 text-center">Recent Projects</h2>
         
         {/* Stanford Student CubeSat Team Section */}
         <Row className="mb-5">
@@ -70,7 +70,7 @@ const Project = () => {
           <Col md={6}>
             <h3>Stanford Student CubeSat Team</h3>
             <p className="lead">
-              I led the Stanford Student CubeSat team in launching the first two satellites made entirely by Stanford Students, Sapling 1 and 2. Both were <a href="https://ssisatellites.notion.site/Sapling-4d49231940b94453b1b8a55e5b9631ff" target="_blank" rel="nonreferrer noopener">open source</a> satellite bus test missions, demonstrating ultra-low-cost space hardware. 
+              I led the Stanford Student CubeSat team in launching the first two satellites made entirely by Stanford Students, Sapling 1 and 2. Both were <a href="https://ssisatellites.notion.site/Sapling-4d49231940b94453b1b8a55e5b9631ff" target="_blank" rel="noreferrer noopener">open source</a> satellite bus test missions, demonstrating ultra-low-cost space hardware. 
             </p>
             <p className="lead">
               Sapling 1 made it to space in January, 2023 but was never deployed due to a launch provider failure. My co-lead and I signed another launch contract for the very next SpaceX rideshare mission, and we successfully launched and operated an upgraded version of Sapling in April, 2023.
